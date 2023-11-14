@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AudioPlayer_v1.Views.RecorderScreen"
+             Title="Recorder Screen">
+
+
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Limpiar" IconImageSource="restart_ico" Clicked="OnBtnLimpiarClicked"/>
+    </ContentPage.ToolbarItems>
+
+
+    <StackLayout Spacing="5" Padding="10" BackgroundColor="Black">
+
+        <Frame VerticalOptions="FillAndExpand" Padding="0">
+            <Button x:Name="btnBtnStartRecording"
+                ImageSource="microphone_ico.png"
+                BorderWidth="5"
+                BorderColor="YellowGreen"
+                BackgroundColor="Black"
+                Clicked="OnBtnStartRecordingClicked"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                ContentLayout="Top"/>
+        </Frame>
+
+
+        <Frame CornerRadius="10" Padding="5">
+            <StackLayout>
+                <Label Text="Descripcion" />
+                <Entry x:Name="txtDescripcion" VerticalOptions="FillAndExpand" Keyboard="Text" TextColor="BlueViolet"/>
+            </StackLayout>
+        </Frame>
+
+
+        <StackLayout Orientation="Horizontal" Spacing="5">
+            <Button x:Name="btnAgregar"
+                    Text="Guardar"
+                    ImageSource="guardar_ico.png"
+                    Clicked="OnBtnGuardarClicked"
+                    HorizontalOptions="FillAndExpand"/>
+
+            <Button x:Name="btnVerLista"
+                    Text="Lista"
+                    ImageSource="lista_ico.png"
+                    Clicked="OnBtnListaClicked"
+                    HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+
+    </StackLayout>
+    
+    
+</ContentPage>
